@@ -15,4 +15,4 @@
 ; An applicative evaluation model interpreter
 ; first calculates the operands. When interpreter
 ; would try to get the value of the operand (p),
-; it falls into the infinite loop.
+; it would be fall into the infinite loop.
