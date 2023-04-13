@@ -1,12 +1,8 @@
 #lang racket
 
-(#%require rackunit)
-
 (define (square x) (* x x))
-
 (define (sum-of-squares x y)
   (+ (square x) (square y)))
-
 (define (fn x y z)
   (cond ((and (> x z) (> y z))
          (sum-of-squares x y))
@@ -14,8 +10,3 @@
          (sum-of-squares x z))
         ((and (> z x) (> y x))
          (sum-of-squares z y))))
-
-(define actual (fn 2 3 5))
-(define expected 34)
-
-(check-equal? actual expected)
