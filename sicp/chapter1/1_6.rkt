@@ -32,7 +32,7 @@
 (define (sqrt x)
   (sqrt-iter 1.0 x))
 
-; (display (sqrt 36))
+; (displayln (sqrt 36))
 ; Lisp (and Racket) uses applicative-order evaluation,
 ; It means that the interpreter first tries to evaluate
 ; the operator and all operands. "if" is a special form,
@@ -42,7 +42,7 @@
 ;
 ; In the present case, created by us operator "new-if"
 ; will be calculated using applicative-order model. So,
-; interpreter tries to evaluate all operand, including
+; interpreter tries to evaluate all operands, including
 ; (sqrt-iter (improve guess x) x). Recursion doesn't
 ; end, because interpreter every time will try to calculate
 ; all operands. That lead to overflows the stack and cause
